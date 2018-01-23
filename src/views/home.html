@@ -20,7 +20,7 @@
 
     <title>MIT Demographics</title>
   </head>
-  <body style="font-family: Roboto; font-weight:10;">
+  <body style="font-family: Roboto; font-weight:10;background-image:url('MIT_Kresge_Auditorium.jpg'); background-size:100% auto; background-repeat: no-repeat;">
 
   <nav id="menu">
     <li><a id="school" class="active" href="#" style="padding: 11px 16px;">School</a></li>
@@ -40,11 +40,30 @@
     <li><a id="school-course" href="#course">Course</a></li>
   </nav>
 
-
-    <div id="fullpage">
-
-
-    </div> 
+  <div class="col-sm-4" style="position:absolute;top:50%;left:50%;transform: translate(-50%,-50%);opacity:1.0">
+    <table id="studentEntryTable" class="table table-bordered table-condensed" style="border-color:black; position:absolute;top:50%;left:50%;transform: translate(-50%,-50%);opacity:1.0">
+      <thead>
+        <tr>
+          <td style="background-color:gray; text-align:center;"><b>Year</b></td>
+          <td style="background-color:gray; text-align:center;"><b>Course</b></td>
+        </tr> 
+      </thead>
+      <tbody id='studentEntryTableBody'>
+        <tr>
+          <td style="background-color:white; text-align:center;"><b>2017</b></td>
+          <td style="background-color:white; text-align:center;"><b>8</b></td>
+        </tr>
+        <tr>
+          <td style="background-color:white; text-align:center;"><b>2016</b></td>
+          <td style="background-color:white; text-align:center;"><b>6</b></td>
+        </tr>
+        <tr>
+          <td style="background-color:white; text-align:center;"><b>2015</b></td>
+          <td style="background-color:white; text-align:center;"><b>10</b></td>
+        </tr>
+      </tbody>
+    </table>
+  </div> 
 
   </body>
 </html>
