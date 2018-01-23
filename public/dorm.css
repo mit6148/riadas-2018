@@ -1,0 +1,165 @@
+#menu {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 46px;
+  background-color: #333;
+  top: 0;
+  margin: 0;
+  z-index: 9;
+}
+.menu-links {
+  @include span(1 of 3);
+  &:last-child {
+    @include last;
+  }
+      background-color: green;
+      height: 100%;
+}
+
+nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 11px 15px;
+    text-decoration: none;
+    color:white;
+}
+
+#school:hover:not(.active) {
+    background-color: #9448d6;
+    text-decoration: none;
+    color:white;
+}
+#dorm:hover:not(.active) {
+    background-color: #2777f7;
+    text-decoration: none;
+    color:white;
+}
+#floor:hover:not(.active) {
+    background-color: #309b43;
+    text-decoration: none;
+    color:white;
+}
+#room:hover:not(.active) {
+    background-color: #ce29cb;
+    text-decoration: none;
+    color:white;
+}
+
+#school.active {
+    background-color: #9448d6;
+    text-decoration: none;
+    color:white;
+}
+#dorm.active {
+    background-color: #2777f7;
+    text-decoration: none;
+    color:white;
+}
+#floor.active {
+    background-color: #309b43;
+    text-decoration: none;
+    color:white;
+}
+#room.active {
+    background-color: #ce29cb;
+    text-decoration: none;
+    color:white;
+}
+
+#dorm-menu {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 46px;
+  background-color: #0048BE;
+  top: 0;
+  margin-top: 46px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  z-index: 9;
+}
+.menu-links {
+  @include span(1 of 3);
+  &:last-child {
+    @include last;
+  }
+      background-color: green;
+      height: 100%;
+}
+
+#dorm-gender:hover:not(.active) {
+    background-color: #005FDA;
+    text-decoration: none;
+    color:white;
+}
+#dorm-race:hover:not(.active) {
+    background-color: #005FDA;
+    text-decoration: none;
+    color:white;
+}
+#dorm-sexual-orientation:hover:not(.active) {
+    background-color: #005FDA;
+    text-decoration: none;
+    color:white;
+}
+#dorm-family-income:hover:not(.active) {
+    background-color: #005FDA;
+    text-decoration: none;
+    color:white;
+}
+#dorm-geolocation:hover:not(.active) {
+    background-color: #005FDA;
+    text-decoration: none;
+    color:white;
+}
+#dorm-course:hover:not(.active) {
+    background-color: #005FDA;
+    text-decoration: none;
+    color:white;
+}
+
+#dorm-gender.active {
+    background-color: #005FDA;
+    text-decoration: none;
+    color:white;
+}
+#dorm-race.active {
+    background-color: #005FDA;
+    text-decoration: none;
+    color:white;
+}
+#dorm-sexual-orientation.active {
+    background-color: #005FDA;
+    text-decoration: none;
+    color:white;
+}
+#dorm-family-income.active {
+    background-color: #005FDA;
+    text-decoration: none;
+    color:white;
+}
+#dorm-geolocation.active {
+    background-color: #005FDA;
+    text-decoration: none;
+    color:white;
+}
+#dorm-course.active {
+    background-color: #005FDA;
+    text-decoration: none;
+    color:white;
+}
