@@ -48,12 +48,18 @@ li a {
     text-decoration: none;
     color:white;
 }
-#floor:hover:not(.active) {
-    background-color: #309b43;
+#room:hover:not(.active) {
+    background-color: #ce29cb;
     text-decoration: none;
     color:white;
 }
-#room:hover:not(.active) {
+
+#login:hover {
+    text-decoration: none;
+    color:white;
+}
+
+#about:hover:not(.active) {
     background-color: #ce29cb;
     text-decoration: none;
     color:white;
@@ -66,11 +72,6 @@ li a {
 }
 #dorm.active {
     background-color: #2777f7;
-    text-decoration: none;
-    color:white;
-}
-#floor.active {
-    background-color: #309b43;
     text-decoration: none;
     color:white;
 }

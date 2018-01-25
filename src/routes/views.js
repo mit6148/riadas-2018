@@ -11,4 +11,8 @@ router.get('/dorm.html', function(req, res) {
 	res.sendFile('dorm.html', { root : 'src/views'});
 });
 
+router.get('/room.html', function(req, res) {
+	res.sendFile('room.html', { root : 'src/views'});
+});
+
 module.exports = router;

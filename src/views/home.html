@@ -7,6 +7,7 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/bower_components/carousel-3d/dist/styles/jquery.carousel-3d.default.css" />
 
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -14,32 +15,41 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
     <script src="/static/home.js"></script>
 
+    <script src="/static/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/static/bower_components/javascript-detect-element-resize/jquery.resize.js"></script>
+    <script src="/static/bower_components/waitForImages/dist/jquery.waitforimages.js"></script>
+    <script src="/static/bower_components/modernizr/modernizr.js"></script>
+    <script src="/static/bower_components/carousel-3d/dist/jquery.carousel-3d.js" ></script>
+
+
+
+
     <!-- CSS -->
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="/static/home.css" />
 
     <title>MIT Demographics</title>
   </head>
-  <body style="font-family: Roboto; font-weight:10;background-image:url('MIT_Kresge_Auditorium.jpg'); background-size:100% auto; background-repeat: no-repeat;">
+  <body style="font-family: Roboto; font-weight:10; background-color:lightgray;">
 
   <nav id="menu">
     <li><a id="school" class="active" href="#" style="padding: 11px 16px;">School</a></li>
     <li><a id="dorm" href="dorm.html">Dorm</a></li>
-    <li><a id="floor" href="#floor">Floor</a></li>
-    <li><a id="room" href="#room">Room</a></li>
-    <li style="float:right; background-color: #4286f4;"><a href="#login"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
-    <li style="float:right"><a href="#about">About</a></li>
+    <li><a id="room" href="room.html">Room</a></li>
+    <li style="float:right; background-color: #4286f4;"><a id="login" href="#login"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+    <li style="float:right"><a id="about" href="#about">About</a></li>
   </nav>
 
   <nav id="school-menu">
     <li><a id="school-gender" class="active" href="#gender">Gender</a></li>
-    <li><a id="school-race" href="#dorm">Race</a></li>
+    <li><a id="school-race" href="#race">Race</a></li>
     <li><a id="school-sexual-orientation" href="#sexual-orientation">Sexual Orientation</a></li>
     <li><a id="school-family-income" href="#family-income">Family Income</a></li>
     <li><a id="school-geolocation" href="#geolocation">Geolocation</a></li>
     <li><a id="school-course" href="#course">Course</a></li>
   </nav>
 
+  <!--
   <div class="col-sm-4" style="position:absolute;top:50%;left:50%;transform: translate(-50%,-50%);opacity:1.0">
     <table id="studentEntryTable" class="table table-bordered table-condensed" style="border-color:black; position:absolute;top:50%;left:50%;transform: translate(-50%,-50%);opacity:1.0">
       <thead>
@@ -64,6 +74,17 @@
       </tbody>
     </table>
   </div> 
+  -->
+
+  <div id="wrapper" style="position:absolute;top:50%;left:50%;transform: translate(-50%,-50%);opacity:1.0; min-width: 640px; min-height: 420px; max-width: 640px; max-height: 420px;">
+    <div id="myCarousel" data-carousel-3d>
+        <img src="/static/Small-world-network-example.png" />
+        <img src="/static/Small-world-network-example.png" selected />
+        <img src="/static/Small-world-network-example.png" />
+        <img src="/static/Small-world-network-example.png" />
+        <img src="/static/Small-world-network-example.png" />
+    </div>
+</div>
 
   </body>
 </html>

@@ -29,7 +29,7 @@ const express = require('express');
 // local dependencies
 const db = require('./db');
 const views = require('./routes/views');
-
+const api = require('./routes/api');
 
 // initialize express app
 const app = express();
@@ -40,6 +40,7 @@ app.use(bodyParser.json());
 
 // set routes
 app.use('/', views);
+app.use('/api', api);
 app.use('/static', express.static('public'));
 
 // 404 route
