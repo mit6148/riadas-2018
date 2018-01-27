@@ -12,33 +12,43 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
-    <script src="/static/dorm.js"></script>
+    <script src="/static/api.js"></script>
+    <script src="/static/room.js"></script>
+
 
     <!-- CSS -->
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    <link rel="stylesheet" type="text/css" href="/static/dorm.css" />
+    <link rel="stylesheet" type="text/css" href="/static/room.css" />
 
     <title>MIT Demographics</title>
   </head>
   <body style="font-family: Roboto; font-weight:10;background-color:lightgray;">
 
-  <nav id="menu">
-    <li><a id="school" href="/" style="padding: 11px 16px;">School</a></li>
-    <li><a id="dorm" href="dorm.html">Dorm</a></li>
-    <li><a id="room" class="active" href="#">Room</a></li>
-    <li style="float:right; background-color: #4286f4;"><a href="#login"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
-    <li style="float:right"><a href="#about">About</a></li>
-  </nav>
+    <nav id="menu">
+      <li><a id="school" href="/" style="padding: 11px 16px;">School</a></li>
+      <li><a id="dorm" href="dorm.html">Dorm</a></li>
+      <li><a id="room" class="active" href="#">Room</a></li>
+      <li style="float:right; background-color: #4286f4;"><a href="#login"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+      <li style="float:right"><a href="#about">About</a></li>
+    </nav>
 
-  <nav id="room-menu">
-    
-  </nav>
+    <nav id="room-menu">
+      <li><a style="color:white; padding-right:5px;">Dorm Name: </a></li>
+      <div class="form-group col-sm-2">
+        <input type="text" placeholder="e.g. Burton Conner" class="form-control" id="dormInput" style="height:33px;width:165px;">
+      </div>
+      <li><a style="position:absolute;top:51%;left:27%;transform: translate(-50%,-50%);opacity:1.0; color:white; padding-left:0px;">Room Number: </a></li>
+      <div class="form-group col-sm-2" style="position:absolute;top:42%;left:40%;transform: translate(-50%,-50%);opacity:1.0; color:white; padding-left:0px;">
+        <input type="text" placeholder="e.g. 512C" class="form-control" id="roomNumberInput" style="height:33px;width:140px;">
+      </div>
+      <button class="btn btn-primary navbar-btn" id="submit" style="position:absolute;top:50%;left:46%;transform: translate(-50%,-50%);opacity:1.0;height:33px;padding-top:4px;">Submit</button>
+    </nav>
+
+    <div id="roomHistoryTableDiv" class="col-sm-3" style="position:absolute;top:53%;left:50%;transform: translate(-50%,-50%);opacity:1.0">
 
 
-    <div id="fullpage">
+    </div>  
 
-
-    </div> 
 
   </body>
 </html>

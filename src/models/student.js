@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 
 const StudentModelSchema = new mongoose.Schema ({
+	year: String,
 	dorm: String,
-	floor: String,
 	room_number: String,
-	course: Number,
+	course: String,
 	geolocation: String,
-	year: Number,
+	grade: String,
 });
 
 module.exports = mongoose.model('StudentModel', StudentModelSchema);
