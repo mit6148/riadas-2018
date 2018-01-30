@@ -58,4 +58,14 @@ const router = express.Router();
   });
 });
 
+router.get('/whoami', function(req, res) {
+  res.send(req.isAuthenticated() ? req.user : {});
+});
+
+router.get('/user', function(req, res) {
+  User.findOne({ _id: req.query._id }, function(err, user) {
+    res.send(user);
+  });
+});
+
 module.exports = router;

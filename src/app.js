@@ -1,3 +1,10 @@
+/*
+!third-party stuff!
+jQuery, Charts.js, Carousel-3d.js, Bootstrap, Leaflet.js
+
+ */
+
+
 
 // libraries
 const http = require('http');

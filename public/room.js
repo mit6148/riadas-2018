@@ -1,5 +1,6 @@
 $(document).ready(function(){ 
 
+
 var ctx = document.getElementById("courseChart");
     var myChart = new Chart(ctx, {
   type: 'pie',
@@ -267,7 +268,12 @@ $(document).on('click', '#submit', function(){
 	    		console.log('studInfo: ')
 	    		console.log(studInfo)
 	    		var td1 = document.createElement('td');
-	    		td1.innerHTML = 'Crs. '+studInfo[1];
+	    		if (studInfo[1] !== 0) {
+		    		td1.innerHTML = 'Crs. '+studInfo[1];	    			
+	    		}
+	    		else {
+	    			td1.innerHTML = 'Undeclared';
+	    		}
 
 	    		var td2 = document.createElement('td');
 	    		td2.innerHTML = 'Year '+studInfo[3];

@@ -7,6 +7,8 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/bower_components/carousel-3d/dist/styles/jquery.carousel-3d.default.css" />
 
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -14,6 +16,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
     <script src="/static/dorm.js"></script>
 
+
+    <script src="/static/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/static/bower_components/javascript-detect-element-resize/jquery.resize.js"></script>
+    <script src="/static/bower_components/waitForImages/dist/jquery.waitforimages.js"></script>
+    <script src="/static/bower_components/modernizr/modernizr.js"></script>
+    <script src="/static/bower_components/carousel-3d/dist/jquery.carousel-3d.js" ></script>
+    
     <!-- CSS -->
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="/static/dorm.css" />
@@ -23,9 +32,9 @@
   <body style="font-family: Roboto; font-weight:10; background-color:lightgray;">
 
   <nav id="menu">
-    <li><a id="school" href="/" style="padding: 11px 16px;">School</a></li>
+    <li><a id="school" href="home.html" style="padding: 11px 16px;">School</a></li>
     <li><a id="dorm" class="active" href="#">Dorm</a></li>
-    <li><a id="room" href="room.html">Room</a></li>
+    <li><a id="room" href="/">Room</a></li>
     <li style="float:right; background-color: #4286f4;"><a href="/auth/google"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
     <li style="float:right"><a href="#about">About</a></li>
   </nav>
@@ -40,10 +49,19 @@
   </nav>
 
 
-    <div id="fullpage">
+  <div id="wrapper" style="position:absolute;top:50%;left:50%;transform: translate(-50%,-50%);opacity:1.0; min-width: 640px; min-height: 420px; max-width: 640px; max-height: 420px;">
+    <div id="myCarousel" data-carousel-3d>
+        <img src="/static/Small-world-network-example.png" />
+        <img src="/static/Small-world-network-example.png" selected />
+        <img src="/static/Small-world-network-example.png" />
+        <img src="/static/Small-world-network-example.png" />
+        <img src="/static/Small-world-network-example.png" />
+    </div>
+</div>
 
-
-    </div> 
+<div> 
+<h3 style="position:absolute;top:60%;left:50%;transform: translate(-50%,-50%);opacity:1.0;"> Under Construction <h3>
+</div>
 
   </body>
 </html>
