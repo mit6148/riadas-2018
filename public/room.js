@@ -310,7 +310,7 @@ $(document).on('click', '#submit', function(){
 
 	    	var timelineImage = document.createElement('img');
 	    	if (numCols === 3) {
-		    	timelineImage.setAttribute('src','/static/people.png');
+		    	timelineImage.setAttribute('src','/static/people.PNG');
 	    	}
 	    	if (numCols === 2) {
 		    	timelineImage.setAttribute('src','/static/people2.png');
