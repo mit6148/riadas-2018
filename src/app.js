@@ -3,19 +3,46 @@
 const http = require('http');
 const bodyParser = require('body-parser');
 const express = require('express');
+const session = require('express-session');
 
 
 // local dependencies
 const db = require('./db');
+const passport = require('./passport');
 const views = require('./routes/views');
 const api = require('./routes/api');
 
 // initialize express app
 const app = express();
 
+app.use(session({
+	secret: 'session-secret',
+	resave: 'false',
+	saveUninitialized: 'true'
+}));
+
 // set POST request body parser
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+// hook up facebook
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.get('/auth/facebook', passport.authenticate('facebook'));
+
+app.get(
+  '/auth/facebook/callback',
+  passport.authenticate(
+    'facebook',
+    { failureRedirect: '/' }
+  ),
+  function(req, res) {
+    res.redirect('/');
+  }
+);
+
+
 
 // set routes
 app.use('/', views);

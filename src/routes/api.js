@@ -36,7 +36,7 @@ const exampleStudent2 = new Student({
 })
 
 exampleStudent2.save();
-*/
+
 
 
 Student.find({ dorm : '500 Memorial Dr', year : 2002}, function(err, studentArr) {
@@ -46,6 +46,7 @@ Student.find({ dorm : '500 Memorial Dr', year : 2002}, function(err, studentArr)
 
   }
 });
+*/
 
 const router = express.Router();
 

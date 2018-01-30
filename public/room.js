@@ -79,7 +79,7 @@ $(document).on('click', '#submit', function(){
 
 	var dorm = document.getElementById('dormInput').value;
 	var room_number = ''+document.getElementById('roomNumberInput').value;
-	room_number = 'A'+room_number+'A';
+	room_number = 'A '+room_number+'A';
 	var letters = ['A','B','C','D','E','F','G','H','I','J','K']
 	
 	/*
@@ -309,7 +309,16 @@ $(document).on('click', '#submit', function(){
 	    	timelineDate.innerHTML = 'September '+year+ ' - June '+year2;
 
 	    	var timelineImage = document.createElement('img');
-	    	timelineImage.setAttribute('src','/static/people.png');
+	    	if (numCols === 3) {
+		    	timelineImage.setAttribute('src','/static/people.png');
+	    	}
+	    	if (numCols === 2) {
+		    	timelineImage.setAttribute('src','/static/people2.png');
+	    	}
+	    	if (numCols === 1) {
+		    	timelineImage.setAttribute('src','/static/people1.png');
+	    	}
+
 
 	    	var tableDiv = document.createElement('div');
 	    	tableDiv.className = 'col-sm-6';
