@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
-const mongoURL = "mongodb://riadas:MITdemoapp@ds213338.mlab.com:13338/mitdemographics-db";
-const options = { useMongoClient: true };
+require('dotenv').config();
+const mongoURL = process.env.MLAB_URL;
+const options = { };
 
 // connects to MongoDB
 mongoose.connect(mongoURL, options);

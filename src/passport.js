@@ -1,26 +1,24 @@
 const passport = require('passport');
-const fbp = require('passport-facebook');
+require('dotenv').config();
+var GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 const User = require('../src/models/user.js');
-
+console.log(process.env.GOOGLE_CLIENT_ID);
 // set up passport configs
-passport.use(new fbp.Strategy({
-  clientID: '159041831545773',
-  clientSecret: 'e10d0dfced731e7a3f2c350aec46c0a6',
-  callbackURL: '/auth/facebook/callback'
+passport.use(new GoogleStrategy({
+  clientID: process.env.GOOGLE_CLIENT_ID, // config variables
+  clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+  callbackURL: '/auth/google/callback'
 }, function(accessToken, refreshToken, profile, done) {
   User.findOne({
-    'fbid': profile.id
+    'googleid': profile.id
   }, function(err, user) {
     if (err) return done(err);
 
     if (!user) {
-      user = new User({
+      const user = new User({
         name: profile.displayName,
-        fbid: profile.id,
-        dorm: '',
-        room: '',
-        searchHistory: []
+        googleid: profile.id
       });
 
       user.save(function(err) {

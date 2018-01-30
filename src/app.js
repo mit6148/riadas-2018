@@ -29,12 +29,12 @@ app.use(bodyParser.json());
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.get('/auth/facebook', passport.authenticate('facebook'));
+app.get('/auth/google', passport.authenticate('google', { scope: ['profile'] }));
 
 app.get(
-  '/auth/facebook/callback',
+  '/auth/google/callback',
   passport.authenticate(
-    'facebook',
+    'google',
     { failureRedirect: '/' }
   ),
   function(req, res) {
@@ -66,7 +66,7 @@ app.use(function(err, req, res, next) {
 });
 
 // port config
-const port = 3000; // config variable
+const port = process.env.PORT || 3000; // config variable
 const server = http.Server(app);
 server.listen(port, function() {
   console.log('Server running on port: ' + port);
