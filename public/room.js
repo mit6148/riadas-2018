@@ -1,3 +1,24 @@
+function main() {
+	get('/api/whoami', {}, function(user) {
+		console.log(user.googleid);
+		if (user.googleid !== undefined) {
+			console.log(user.googleid);
+			var menu = document.getElementById('menu');
+			var profile = document.createElement('li');
+			profile.setAttribute('style','float:right');
+			var link = document.createElement('a');
+			link.setAttribute('href','#');
+
+			profile.appendChild(link);
+			menu.appendChild(profile);
+
+		}
+	})
+
+};
+
+main();
+
 $(document).ready(function(){ 
 
 
@@ -5,7 +26,7 @@ var ctx = document.getElementById("courseChart");
     var myChart = new Chart(ctx, {
   type: 'pie',
   data: {
-    labels: ["Green", "Blue", "Gray", "Purple", "Yellow", "Red", "Black"],
+    labels: ["Course 2", "Course 6", "Course 10", "Course 14", "Course 18", "Course 20"],
     datasets: [{
       backgroundColor: [
         "#2ecc71",
@@ -16,7 +37,7 @@ var ctx = document.getElementById("courseChart");
         "#e74c3c",
         "#34495e"
       ],
-      data: [12, 19, 3, 17, 28, 24, 7]
+      data: [2, 2, 1, 1, 1, 1]
     }]
   },
   options: {
@@ -29,7 +50,7 @@ var ctx2 = document.getElementById("gradeChart");
     var gradeChart = new Chart(ctx2, {
   type: 'pie',
   data: {
-    labels: ["Green", "Blue", "Gray", "Purple", "Yellow", "Red", "Black"],
+    labels: ["Freshman", "Sophomore", "Junior", "Senior"],
     datasets: [{
       backgroundColor: [
         "#2ecc71",
@@ -40,7 +61,7 @@ var ctx2 = document.getElementById("gradeChart");
         "#e74c3c",
         "#34495e"
       ],
-      data: [12, 19, 3, 17, 28, 24, 7]
+      data: [6,0,0,2]
     }]
   },
   options: {
@@ -77,6 +98,8 @@ $(document).on('click', '#submit', function(){
 	for (idx = 0; idx < alphabeticalStates.length; idx++) {
 		statesData.features[idx].properties.density = 0;
 	}
+
+	//map.removeLayer(geoJson);
 
 	var dorm = document.getElementById('dormInput').value;
 	var room_number = ''+document.getElementById('roomNumberInput').value;
